@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook - Sesión 4: ¡Movimiento y Sonido! - Héroes y Villanos Vivos</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; }
+        .container { max-width: 1000px; margin: auto; padding: 20px; }
+        .header { background-color: #ffa500; color: white; text-align: center; padding: 10px; } /* Orange Accent */
+        .activity { margin-bottom: 20px; }
+        details > summary {
+            background-color: #ffa500; /* Orange Accent */
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 0px; /* Reduced margin */
+            font-weight: bold;
+            list-style: none; /* Hide default arrow */
+            position: relative;
+            outline: none;
+            border-radius: 5px 5px 0 0; /* Rounded top corners */
+        }
+        details > summary::-webkit-details-marker { display: none; } /* Hide default arrow for Chrome/Safari */
+        details > summary::before { /* Custom Arrow */
+            content: '▶';
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.9em; /* Slightly larger arrow */
+            transition: transform 0.2s;
+        }
+        details[open] > summary::before { /* Custom Arrow when open */
+            transform: translateY(-50%) rotate(90deg);
+        }
+        details .content { /* Content visible by default inside details */
+             display: block;
+             padding: 15px; /* More padding */
+             border: 1px solid #ddd;
+             border-top: none; /* Avoid double border with summary */
+             margin-bottom: 10px;
+             border-radius: 0 0 5px 5px; /* Rounded bottom corners */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px; /* Add some space above the table */
+        }
+        th, td {
+            padding: 12px; /* Slightly more padding */
+            border: 1px solid #ddd;
+            text-align: left;
+            vertical-align: top; /* Ensure content aligns at the top */
+        }
+        th {
+            background-color: #f8f8f8; /* Lighter grey background for headers */
+            font-weight: bold;
+        }
+        /* Style for the 'Action' column */
+        td:first-child {
+            width: 50%;
+        }
+        /* Style for the 'Dialogue' column */
+        td:last-child {
+            width: 50%;
+        }
+        /* Making facilitator instructions clearer */
+        td em, td i { /* Style for italicized facilitator notes */
+            color: #555;
+            font-style: italic;
+            display: block; /* Put notes on new lines */
+            margin-top: 5px;
+        }
+        /* Ensure step <strong> tags render bold */
+        td strong { font-weight: bold; display: block; margin-bottom: 5px; }
+
+
+        span[style*="color: red;"] {
+            font-weight: bold;
+        }
+        ul, ol {
+            margin-top: 5px; /* Adjust spacing for lists */
+            margin-bottom: 10px;
+            padding-left: 25px; /* Indent lists slightly more */
+        }
+        li {
+            margin-bottom: 8px; /* More space between list items */
+        }
+        .time-title { margin-bottom: 20px; text-align: center; font-size: 1.2em; color: #555; font-weight: bold;}
+         hr { border: none; border-top: 1px solid #eee; margin: 8px 0; } /* Subtle separator */
+         .subtitle { font-size: 0.9em; color: #e0e0e0; margin-top: 5px;} /* Subtitle style from example */
+    </style>
+    <script>
+        // Basic script to ensure details elements work consistently if needed,
+        // but modern browsers handle <details> natively.
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>Playbook - Sesión 4: ¡Movimiento y Sonido! - Héroes y Villanos Vivos</h1>
+    </div>
+    <div class="container">
+        <h2 class="time-title">Tiempo efectivo de clase: 40 minutos</h2>
+
+        <!-- Resumen de Sesión -->
+        <details id="activity-0" class="activity" open> <!-- Open by default -->
+            <summary>📝 Resumen de Sesión</summary>
+            <div class="content">
+                <table>
+                    <tr>
+                        <td style="width: 50%; padding: 10px; border-right: 1px solid #ddd;">
+                            <strong>🎯 Objetivo de la Sesión:</strong>
+                            <ul>
+                                <li>Añadir vida y personalidad a los personajes y escenas de la aventura interactiva.</li>
+                                <li>Utilizar bloques de movimiento simple (ej. saltar, girar) en Scratch Jr.</li>
+                                <li>Incorporar bloques de sonido (ej. "pop", grabar sonido propio) en momentos clave.</li>
+                                <li>Aplicar estas mejoras a 1-2 elementos seleccionados del proyecto.</li>
+                                <li>Continuar la práctica de colaboración y uso del Kanban.</li>
+                            </ul>
+                        </td>
+                        <td style="width: 50%; padding: 10px;">
+                            <strong>🔑 Entregable Clave:</strong> Proyecto Scratch Jr. con al menos una animación de movimiento simple y/o un efecto de sonido incorporado en la interacción principal o en una de las escenas (Mejor o Peor).
+                            <br><br>
+                            <strong>⏱️ Duración Estimada:</strong> 40 minutos.
+                            <br><br>
+                            <strong>🛠️ Materiales Específicos:</strong>
+                            <ul>
+                                <li>Dispositivos con Scratch Jr. y el proyecto estable guardado de la Sesión 3.</li>
+                                <li>Dibujos de la Fase 2 (para inspiración).</li>
+                                <li>Tablero Kanban con el estado actualizado de la Sesión 3.</li>
+                                <li>Nuevas tarjetas de tareas para Kanban: "Añadir Movimiento Simple", "Añadir Sonido Clic", "Añadir Sonido Ambiente".</li>
+                                <li>Micrófono del dispositivo habilitado (para grabar sonidos).</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </details>
+
+        <!-- Actividad 1: Stand-up Creativo -->
+        <details id="activity-1" class="activity">
+            <summary>✨ Actividad 1: Stand-up Creativo ⏰ Tiempo: 5 minutos</summary>
+            <div class="content">
+                <table>
+                    <tr>
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo del Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1 (2 min): Revisión y Objetivo del Día</strong>
+                            <br>Reunir a los equipos con su proyecto abierto.
+                            <br>Confirmar que los clics funcionan bien desde la sesión anterior.
+                            <br><strong>Proyectar Diapositiva 1</strong> (Título de la Sesión + Iconos de movimiento (flechas girando, saltando) y sonido (altavoz, notas musicales)).
+                        </td>
+                        <td>
+                            "¡Hola, súper creadores! ¿Listos para darle más chispa a nuestra aventura?"
+                            <br><br>
+                            "La última vez nos aseguramos de que los clics funcionaran perfectamente, ¿cierto? ¡Bien!"
+                            <br><br>
+                            "Hoy vamos a añadir... ¡VIDA! <em>(Mostrar Diapositiva 1)</em>. Haremos que nuestros personajes se muevan un poquito y que las escenas ¡tengan sonido! Será como ponerle música y baile a nuestra historia."
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 2 (3 min): Roles y Kanban</strong>
+                             <br>Revisar roles brevemente (Constructor/a implementa, Diseñador/a sugiere, Probador/a verifica).
+                             <br>Permitir rotación si se desea, confirmar roles.
+                             <br>Añadir tarjetas "Añadir Movimiento Simple", "Añadir Sonido Clic", "Añadir Sonido Ambiente" a "Tareas por Hacer" en Kanban.
+                        </td>
+                        <td>
+                            "Recordemos nuestros roles de expertos: El Constructor/a usará los nuevos bloques de movimiento y sonido. El Diseñador/a ayudará a decidir dónde ponerlos y cómo deberían ser. Y el Probador/a revisará que se vean y oigan genial, ¡y que no rompan nada!"
+                             <br><br>
+                            "¿Rotamos roles hoy? <em>(Confirmar roles)</em>. ¡Estupendo!"
+                            <br><br>
+                             "Añadamos las nuevas misiones a nuestro Mapa Mágico: 'Añadir Movimiento Simple', 'Añadir Sonido Clic', y quizás 'Añadir Sonido Ambiente'."
+                             <br>
+                            <em>(Añadir tarjetas al Kanban).</em> "¡Equipo listo para animar y sonorizar!"
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </details>
+
+        <!-- Actividad 2: Añadiendo Chispa -->
+        <details id="activity-2" class="activity">
+            <summary>💥 Actividad 2: Añadiendo Chispa ⏰ Tiempo: 30 minutos</summary>
+            <div class="content">
+                <table>
+                    <tr>
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo del Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1 (3 min): Elegir Elementos a Animar/Sonorizar</strong>
+                            <br>Pedir a cada equipo que elija 1 o 2 cosas específicas para añadir movimiento o sonido.
+                            <br>Dar ejemplos basados en el PDF (sonido/salto al tocar Héroe, sol girando en Escena Mejor, sonido triste en Escena Peor).
+                            <br>El **Diseñador/a** puede liderar esta elección, consultando los dibujos o el T-Bar.
+                        </td>
+                        <td>
+                            "¡Okay, equipos! No podemos animarlo TODO hoy, así que vamos a elegir con inteligencia."
+                            <br><br>
+                            "Piensen en 1 o 2 momentos o personajes clave. Por ejemplo: ¿Qué tal si el Héroe hace un sonido 'pop' o da un saltito justo cuando lo tocan, antes de ir a la Escena Mejor? O quizás en la Escena Mejor, ¿podría el sol girar un poquito felizmente? Y en la Escena Peor, ¿podríamos grabar un sonido triste?"
+                            <br><br>
+                            "Diseñadores, ¿qué ideas tienen? Elijan 1 o 2 cosas para empezar."
+                             <br>
+                            <em>(Dar 1-2 minutos para que cada equipo decida).</em>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 2 (12 min): Implementar Movimiento Simple</strong>
+                            <br>Si eligieron movimiento: Guiar al **Constructor/a** para encontrar y usar bloques de movimiento (Azules: Mover, Girar, Saltar; Naranja: Repetir).
+                            <br>Mostrar dónde conectar estos bloques (ej. después de "Al Tocar Personaje" pero antes de "Ir a Escena", o con bandera verde en una escena específica).
+                            <br><strong>Proyectar Diapositiva 2</strong> (Mostrar ejemplos visuales de bloques de movimiento relevantes: Girar Derecha/Izquierda, Saltar, y quizás el bloque Naranja 'Repetir').
+                            <br>El **Diseñador/a** opina sobre cómo se ve el movimiento.
+                            <br>El **Probador/a** verifica que funcione y no interfiera con los clics.
+                            <br>Mover tarjeta "Añadir Movimiento Simple" a "¡Haciendo Ahora!" / "¡Listo para Probar!".
+                        </td>
+                        <td>
+                            "¡Si eligieron movimiento, atentos Constructores!"
+                            <br><br>
+                            "Busquen los bloques azules. Tenemos flechas para mover, flechas que giran para rotar, ¡y uno para saltar! <em>(Mostrar Diapositiva 2)</em>. Quizás quieran que algo se repita usando el bloque naranja 'Repetir'."
+                            <br><br>
+                            "Piensen dónde ponerlo. Si es un salto al tocar, iría entre el bloque amarillo 'Al Tocar' y el rojo 'Ir a Escena'. Si es algo que pasa siempre en una escena (como el sol girando), quizás empiece con la bandera verde en esa escena."
+                            <br><br>
+                            "Diseñadores, ¿se ve bien ese giro? ¿Es muy rápido, muy lento?"
+                            <br><br>
+                            "Probadores, ¡a probar! ¿Se mueve como queremos? ¿Sigue funcionando el clic para cambiar de escena?"
+                             <br><br>
+                            "¡Muevan la tarjeta 'Añadir Movimiento Simple' en el Kanban!"
+                             <br>
+                            <em>(Facilitador ayuda a encontrar bloques y sugiere conexiones lógicas).</em>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 3 (12 min): Implementar Sonido</strong>
+                            <br>Si eligieron sonido: Guiar al **Constructor/a** para encontrar y usar bloques de sonido (Verdes: Pop, Grabar).
+                            <br>Explicar cómo usar el sonido "Pop" predeterminado o cómo grabar un sonido corto usando el micrófono.
+                            <br>Mostrar dónde conectar el bloque de sonido (similar al movimiento).
+                            <br><strong>Proyectar Diapositiva 3</strong> (Mostrar ejemplos visuales de bloques de sonido: 'Pop' y 'Grabar Sonido' con el icono del micrófono).
+                            <br>El **Diseñador/a** opina si el sonido encaja con la acción/escena.
+                            <br>El **Probador/a** verifica que el sonido se reproduzca correctamente y en el momento adecuado.
+                            <br>Mover tarjeta "Añadir Sonido Clic" o "Añadir Sonido Ambiente" a "¡Haciendo Ahora!" / "¡Listo para Probar!".
+                        </td>
+                        <td>
+                            "¡Si eligieron sonido, preparen sus oídos!"
+                            <br><br>
+                            "Constructores, busquen los bloques verdes. Hay uno simple llamado 'Pop', ¡pruébenlo! <em>(Mostrar Diapositiva 3)</em>."
+                            <br><br>
+                            "¡Pero lo más divertido es GRABAR! Busquen el bloque con el micrófono. Púlselo, luego el botón rojo para grabar un sonido corto (¡shhh!, sin mucho ruido de fondo), y luego el check para guardarlo. ¡Pueden grabar un 'uh-oh' triste, un '¡Yupi!' feliz, o lo que quieran!"
+                            <br><br>
+                            "Conecten el bloque de sonido donde quieran que suene (ej. después de tocar, o al empezar una escena)."
+                            <br><br>
+                            "Diseñadores, ¿ese sonido pega con la escena? ¿Es apropiado?"
+                            <br><br>
+                            "Probadores, ¿se oye bien? ¿Suena cuando debe?"
+                            <br><br>
+                            "¡Actualicen el Kanban con la tarjeta de sonido que estén trabajando!"
+                            <br>
+                            <em>(Facilitador ayuda con la grabación y la conexión de bloques).</em>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <strong>Paso 4 (3 min): Integración y Pruebas Finales</strong>
+                            <br>Los equipos prueban la combinación de clic, movimiento y/o sonido.
+                            <br>El **Probador/a** verifica que todo funcione junto sin problemas.
+                            <br>Realizar ajustes menores si es necesario.
+                            <br>Mover las tarjetas trabajadas a "✅ ¡Terminado!" si funcionan bien.
+                            <br><strong>Proyectar Diapositiva 4</strong> (Recordatorio visual del flujo Kanban completo).
+                        </td>
+                        <td>
+                            "¡Últimos minutos! Prueben todo junto. ¿Funciona el clic Y el movimiento? ¿Se oye el sonido Y cambia la escena?"
+                            <br><br>
+                            "Probadores, ¡última revisión! ¿Todo en orden?"
+                            <br><br>
+                            "Si la chispa que añadieron funciona bien con el resto... ¡Es hora de mover esas tarjetas a '✅ ¡Terminado!' en nuestro Mapa Mágico! <em>(Mostrar Diapositiva 4)</em>."
+                            <br>
+                            <em>(Ayudar a finalizar las tareas en el Kanban).</em>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </details>
+
+        <!-- Actividad 3: Cierre Sonoro -->
+        <details id="activity-3" class="activity">
+            <summary>🔊 Actividad 3: Cierre Sonoro ⏰ Tiempo: 5 minutos</summary>
+            <div class="content">
+                <table>
+                    <tr>
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo del Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1 (2 min): Compartir la Chispa (Opcional)</strong>
+                            <br>Invitar a 1-2 equipos a mostrar brevemente el movimiento o sonido que añadieron.
+                        </td>
+                        <td>
+                            "¡Wow, equipos! ¡Sus aventuras ahora tienen más personalidad!"
+                            <br><br>
+                            "¿Alguien quiere compartir rápidamente el movimiento genial o el sonido divertido que añadieron? <em>(Demo rápida de 1-2 equipos)</em>. ¡Qué creatividad! ¡Aplausos!"
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 2 (2 min): Guardar Proyecto (¡Fundamental!)</strong>
+                            <br>Guiar EXPLICITAMENTE a los Constructores para guardar el proyecto con las nuevas animaciones/sonidos.
+                            <br>Asegurarse de que todos guarden.
+                            <br><strong>Proyectar Diapositiva 5</strong> (Icono grande de Guardar + Mensaje "¡Guarda tu Aventura Animada!").
+                        </td>
+                        <td>
+                            "¡Importantísimo! ¡Guardemos esta versión con más vida! ¡Que no se pierda la chispa!"
+                            <br><br>
+                            "Constructores, ¡a guardar! Usen el botón de siempre (casita o ✓). <em>(Mostrar Diapositiva 5)</em>."
+                             <br><br>
+                            <em>(Verificar que todos guarden).</em> "¿Guardado? ¡Bien!"
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <strong>Paso 3 (1 min): Próximos Pasos y Cierre</strong>
+                            <br>Anunciar brevemente el objetivo de la Sesión 5 (Pulido Visual).
+                            <br>Felicitar final.
+                        </td>
+                        <td>
+                            "¡Felicidades, creadores! Sus Héroes y Villanos están más vivos que nunca con movimiento y sonido."
+                            <br><br>
+                            "La próxima vez, nos pondremos nuestros lentes de diseñadores expertos para hacer un 'Pulido Visual'. Haremos que todo se vea aún más increíble, ajustando tamaños, posiciones y quizás añadiendo algún texto."
+                            <br><br>
+                            "¡Hicieron un trabajo vibrante hoy! ¡Nos vemos para la sesión de estilo! ¡Adiós!"
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </details>
+
+    </div> <!-- Fin del container -->
+</body>
+</html>
